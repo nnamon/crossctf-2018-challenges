@@ -67,4 +67,29 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+  config.vm.provision "shell", inline: <<-SHELL
+    dpkg --add-architecture i386
+    apt-get update
+    apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 gdb python python-pip libssl-dev gcc git binutils socat apt-transport-https ca-certificates libc6-dev-i386 python-capstone libffi-dev
+    hash -r
+    pip install --upgrade pip
+    pip install ropgadget
+    pip install pwntools
+    pip install ipython
+    pip install ropper
+    git clone https://github.com/longld/peda.git /home/vagrant/peda
+    echo "source ~/peda/peda.py" >> /home/vagrant/.gdbinit
+    git clone https://github.com/niklasb/libc-database.git /home/vagrant/libc-database
+    cd /home/vagrant/libc-database
+    /home/vagrant/libc-database/add /lib/i386-linux-gnu/libc.so.6
+    /home/vagrant/libc-database/add /lib/x86_64-linux-gnu/libc.so.6
+    apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+    echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | tee /etc/apt/sources.list.d/docker.list
+    apt-get update
+    apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual
+    apt-get install -y docker-engine
+    groupadd docker
+    usermod -aG docker vagrant
+    service docker start
+  SHELL
 end
