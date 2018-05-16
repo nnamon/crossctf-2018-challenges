@@ -1,7 +1,7 @@
 {
-  "name": "weird_node_1",
+  "name": "weird_node_3",
   "version": "1.0.0",
-  "description": "Weird Node Challenge 1",
+  "description": "Weird Node Challenge 3",
   "author": "Quan Yang <quanyang@nusgreyhats.org>",
   "main": "challenge.js",
   "scripts": {
