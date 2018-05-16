@@ -3,3 +3,4 @@ ubuntu-xenial-16.04-cloudimg-console.log
 peda-session*
 .gdb_history
 core
+*.pyc

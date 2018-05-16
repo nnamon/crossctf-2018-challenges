@@ -1,3 +1,0 @@
-[submodule "challenges/cryptonight_variant2/src/py-cryptonight"]
-	path = challenges/cryptonight_variant2/src/py-cryptonight
-	url = https://github.com/ph4r05/py-cryptonight.git
