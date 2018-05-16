@@ -1,0 +1,13 @@
+{
+  "name": "weird_node_2",
+  "version": "1.0.0",
+  "description": "Weird Node Challenge 2",
+  "author": "Quan Yang <quanyang@nusgreyhats.org>",
+  "main": "challenge.js",
+  "scripts": {
+    "start": "node challenge.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
