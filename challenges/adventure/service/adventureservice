@@ -1,0 +1,12 @@
+service adventureservice
+{
+    disable = no
+    socket_type = stream
+    protocol    = tcp
+    wait        = no
+    user        = adventureuser
+    bind        = 0.0.0.0
+    server      = /home/adventureuser/adventure
+    type        = UNLISTED
+    port        = 31337
+}
