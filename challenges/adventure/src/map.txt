@@ -1,0 +1,70 @@
+Contents of each room:
+
+CON
+000 - Void (0)
+001 - Ammonia (3)
+002 - Nitrogen (0)
+010 - Water (2)
+012 - Nitrous Oxide (0)
+020 - Peroxide (2)
+030 - Ozone (0)
+
+100 - Methane (4)
+101 - Hydrogen Cyanide (1)
+110 - Formaldehyde (2)
+112 - Urea (4)
+130 - Carbonic Acid (2)
+
+200 - Ethylene (4)
+210 - Ethanol (6)
+220 - Acetic Acid (4)
+221 - Glycine (5)
+230 - Glyoxylic Acid (2)
+
+300 - Propane (6)
+310 - Acetone (6)
+330 - Glycerol (8)
+
+
+Output map:
+
+C=0
+    N
+   0123
+  0###
+O 1# #
+  2#
+  3#
+
+C=1
+    N
+   0123
+  0##
+O 1# #
+  2
+  3#
+
+C=2
+    N
+   0123
+  0#
+O 1#
+  2##
+  3#
+
+C=3
+    N
+   0123
+  0##
+O 1
+  2
+  3#
+
+
+Output phrase:
+
+capsaicin in formula
+01234567890123456789
+
+flag:
+C18H27NO3
