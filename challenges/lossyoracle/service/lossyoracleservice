@@ -1,0 +1,13 @@
+service lossyoracleservice
+{
+    disable = no
+    socket_type = stream
+    protocol    = tcp
+    wait        = no
+    user        = lossyoracleuser
+    bind        = 0.0.0.0
+    server      = /home/lossyoracleuser/lossyoracle
+    type        = UNLISTED
+    port        = 31337
+}
+
