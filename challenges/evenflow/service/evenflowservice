@@ -1,0 +1,13 @@
+service evenflowservice
+{
+    disable = no
+    socket_type = stream
+    protocol    = tcp
+    wait        = no
+    user        = evenflow
+    bind        = 0.0.0.0
+    server      = /home/evenflow/evenflow.py
+    type        = UNLISTED
+    port        = 31337
+}
+
