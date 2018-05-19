@@ -1,19 +1,15 @@
-Kryptonight 2
+Easynote
 ---------
-
-Challenge requiring the user to hash data with cryptonight lite variant 1.
 
 # Question Text
 
 ```
-Have I got a little story for you
-What you thought was your daddy
-Was nothin' but a
+Get a shell.
 
-nc ctf.pwn.sg 1503
+nc ctf.pwn.sg 1700
 ```
 
-*Creator -  amon (@nn_amon)*
+*Creator -  jarsp (@jarsp)*
 
 # Setup Guide
 
@@ -26,4 +22,4 @@ nc ctf.pwn.sg 1503
 
 # Exploit Details
 
-Annotated working exploit is in src/exploit.sh
+Annotated working exploit is in src/exploit.py

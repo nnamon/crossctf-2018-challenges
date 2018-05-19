@@ -28,7 +28,7 @@ the enemy's base...
 
 Non-standard flag format: `[A-Z0-9]+`
 
-nc ctf.pwn.sg 1500
+nc ctf.pwn.sg 1400
 ```
 
 *Creator -  prokarius (@prokarius)*
@@ -43,6 +43,6 @@ nc ctf.pwn.sg 1500
 5. Test the connectivity with netcat.
 
 # Solution Details
-Identify each chemical, and piece together the clues as written on the wall. The 
+Identify each chemical, and piece together the clues as written on the wall. The
 final clue should read "capsaicin in formula" to which the correct answer:
 C18H27NO3

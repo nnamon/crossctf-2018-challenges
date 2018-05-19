@@ -1,0 +1,12 @@
+service easynote
+{
+    disable     = no
+    type        = UNLISTED
+    socket_type = stream
+    protocol    = tcp
+    user        = easynote
+    wait        = no
+    bind        = 0.0.0.0
+    server      = /home/easynote/easynote
+    port        = 54245
+}

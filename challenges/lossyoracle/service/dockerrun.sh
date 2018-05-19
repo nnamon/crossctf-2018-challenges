@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker run -dt -p 1602:31337 lossyoracle
+docker run -dt -p 1401:31337 lossyoracle

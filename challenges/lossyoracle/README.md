@@ -8,7 +8,7 @@ A simple crypto challenge which has a small element of probability involved.
 ```
 No one believes I can recover the message from this crappy ORacle.
 
-nc ctf.pwn.sg 1500
+nc ctf.pwn.sg 1401
 ```
 
 *Creator -  prokarius (@prokarius)*

@@ -1,0 +1,1 @@
+go build -o crackme -ldflags "-s" crackme.go
