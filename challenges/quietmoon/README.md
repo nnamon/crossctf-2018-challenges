@@ -1,23 +1,15 @@
-Real Baby Pwnable
+Quiet Moon
 ---------
 
-The binary is vulnerable to a memory information leak as well as a stack
-overflow vulnerability. It is compiled with stack canary and PIE.
-
-The service fills out a buffer with fibonacci numbers and prompts the user
-repeatedly for which fibonnaci(n) number to query. There is no bounds checking
-on the n to query and memory addresses after the buffer can be retrieved. An
-attacker can leverage this to leak the canary as well as the return address
-back to main. This allows the attacker to bypass the stack canary during the
-overflow and to calculate the address of `babymode` function from the main
-leak.
+Format string vulnerability allows an attacker to overwrite a global variable
+string with a path to the flag.
 
 # Question Text
 
 ```
-This is an actual baby pwn challenge.
+Do you like vampires?
 
-nc ctf.pwn.sg 1500
+nc ctf.pwn.sg 2901
 ```
 
 *Creator -  amon (@nn_amon)*
@@ -33,4 +25,4 @@ nc ctf.pwn.sg 1500
 
 # Exploit Details
 
-Annotated working exploit is in src/exploit.sh
+Annotated working exploit is in src/exploit.py
