@@ -1,12 +1,12 @@
 #!/bin/bash
 
-find /var/lib/mysql -type f -exec touch {} \; 
-service mysql start 
+find /var/lib/mysql -type f -exec touch {} \;
+service mysql start
 service apache2 start &
 mysql -uroot -pAdmin2015 -e """
 drop database exampleDB;
-SET PASSWORD = PASSWORD('XCTFP@SSW0RDV3RYL0NGANDG00DANDVERYLONG'); 
-CREATE USER 'crossctf'@'localhost' IDENTIFIED BY 'XCTFP@SSW0RDV3RYL0NGANDG00DANDVERYLONG';
+SET PASSWORD = PASSWORD('CROSSCTFP@SSW0RDV3RYL0NGANDG00DANDVERYLONG');
+CREATE USER 'crossctf'@'localhost' IDENTIFIED BY 'CROSSCTFP@SSW0RDV3RYL0NGANDG00DANDVERYLONG';
 GRANT SELECT, INSERT, CREATE ON crossctf.* TO 'crossctf'@'localhost';
 CREATE DATABASE crossctf;
 USE crossctf;
