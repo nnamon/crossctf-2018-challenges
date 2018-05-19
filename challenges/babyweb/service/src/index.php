@@ -29,7 +29,7 @@ function getAllUsernameLike($username) {
     $sql = "SELECT username FROM users WHERE username like '%$username%';";
     $result = $conn->query($sql);
     while ($row = $result->fetch_array()) {
-        array_push($return, $row);   
+        array_push($return, $row);
     }
     $conn->close();
     if ( empty($return) ) {
@@ -75,7 +75,7 @@ if (isset($_GET['search']) && isset($_POST['username'])) {
                 <div class="row ">
                     <div class="col offset-m1 s10 m10 center-align">
                         The flag is in the flag column of the user 'admin'.</br>
-                        View source <a href="?source">here</a>.
+                        View source <a href="?source=1">here</a>.
                     </div>
                 </div>
                 <div class="row">
@@ -108,7 +108,7 @@ if (isset($_GET['search']) && isset($_POST['username'])) {
                                             </tbody>
                                         </table>
                                     </center>
-                                </p>  
+                                </p>
                             </form>
                         </div>
                     </div>
