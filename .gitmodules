@@ -1,0 +1,3 @@
+[submodule "challenges/quietmoon/src/libformatstr"]
+	path = challenges/quietmoon/src/libformatstr
+	url = https://github.com/hellman/libformatstr.git
