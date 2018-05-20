@@ -1,0 +1,13 @@
+service bloodmoonservice
+{
+    disable = no
+    socket_type = stream
+    protocol    = tcp
+    wait        = no
+    user        = moonmoon
+    bind        = 0.0.0.0
+    server      = /home/moonmoon/bloodmoon
+    type        = UNLISTED
+    port        = 31337
+}
+
