@@ -1,2 +1,2 @@
-all: realbabypwn.c
-	gcc -o realbabypwn -fpic -pie realbabypwn.c
+all: gruffybear.c
+	gcc -o gruffybear -fpic -pie gruffybear.c
