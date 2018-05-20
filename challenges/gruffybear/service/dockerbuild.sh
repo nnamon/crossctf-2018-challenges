@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t realbabypwn .
+docker build -t gruffybear .
