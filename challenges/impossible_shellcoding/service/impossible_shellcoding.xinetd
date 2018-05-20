@@ -1,0 +1,12 @@
+service impossible_shellcoding
+{
+    disable     = no
+    type        = UNLISTED
+    socket_type = stream
+    protocol    = tcp
+    user        = impossible_shellcoding
+    wait        = no
+    bind        = 0.0.0.0
+    server      = /home/impossible_shellcoding/impossible_shellcoding
+    port        = 34643
+}
