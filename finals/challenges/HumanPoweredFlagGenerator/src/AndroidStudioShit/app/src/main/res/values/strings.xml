@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Human-Powered Flag Generator!</string>
+    <string name="flag">The flag is: CrossCTF{%1$s}</string>
+    <string name="percent">Percent done for level %1$d: %2$s</string>
+    <string name="speedup">Try speed up</string>
+    <string name="crank">Crank!</string>
+</resources>
