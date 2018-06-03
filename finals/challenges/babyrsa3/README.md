@@ -31,6 +31,6 @@ however it might be faster to use online factorisation tools such as
 1 more speedup to consider:
 p and q should ideally have approximately equal length, so
 instead of considering all possible bit masks, you only consider masks that
-allows p and q to not differ by too many bits.
+allows p and q to not differ by too many bits initially.
 
 [ECM]: https://www.alpertron.com.ar/ECM.HTM
