@@ -1,12 +1,12 @@
-FROM ubuntu:latest
-ENV user=realbabypwnuser
+FROM ubuntu:xenial
+ENV user=gruffybear
 RUN apt-get update
 RUN apt-get install -y xinetd
 RUN useradd -m $user
 RUN echo "$user     hard    nproc       20" >> /etc/security/limits.conf
-COPY ./realbabypwn /home/$user/realbabypwn
+COPY ./gruffybear /home/$user/gruffybear
 COPY ./flag /home/$user/flag
-COPY ./realbabypwnservice /etc/xinetd.d/realbabypwnservice
+COPY ./gruffybearservice /etc/xinetd.d/gruffybearservice
 RUN chown -R root:$user /home/$user
 RUN chmod -R 750 /home/$user
 RUN chown root:$user /home/$user/flag

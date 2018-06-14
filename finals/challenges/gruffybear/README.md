@@ -1,23 +1,17 @@
-Real Baby Pwnable
+GruffyBear
 ---------
 
-The binary is vulnerable to a memory information leak as well as a stack
-overflow vulnerability. It is compiled with stack canary and PIE.
-
-The service fills out a buffer with fibonacci numbers and prompts the user
-repeatedly for which fibonnaci(n) number to query. There is no bounds checking
-on the n to query and memory addresses after the buffer can be retrieved. An
-attacker can leverage this to leak the canary as well as the return address
-back to main. This allows the attacker to bypass the stack canary during the
-overflow and to calculate the address of `babymode` function from the main
-leak.
+The binary is compiled with all protections. The key vulnerabilities are an
+information leak that allows the attacker to get the address of free in libc
+and a use-after-free that lets the attacker craft an arbitrary function pointer
+to evoke after certain conditions are met.
 
 # Question Text
 
 ```
-This is an actual baby pwn challenge.
+There's something fishy about this Build-A-Bear workshop...
 
-nc ctf.pwn.sg 1500
+nc ctf.pwn.sg 4002
 ```
 
 *Creator -  amon (@nn_amon)*
@@ -27,7 +21,7 @@ nc ctf.pwn.sg 1500
 0. Install docker on the hosting system
 1. Replace the flag in distribute/flag
 2. Build the docker image with: `sh dockerbuild.sh`
-3. Replace the port 1500 with your desired port in dockerrun.sh
+3. Replace the exposed port with your desired port in dockerrun.sh
 4. Start the docker image: `sh dockerrun.sh`
 5. Test the connectivity with netcat.
 
