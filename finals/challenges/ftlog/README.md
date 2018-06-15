@@ -1,16 +1,14 @@
-Coca Cola
+FTLOG
 ---------
 
-Uninitialized stack variables allows an attacker to forge the entries in a
-data struct to overwrite a C string pointer in the struct to point at the
-flag page.
+ARM shellcoding challenge.
 
 # Question Text
 
 ```
-Catch the Wave. Coke!
+https://youtu.be/RW2vXFLXtps
 
-nc get.pwn.sg 4001
+nc ctf.pwn.sg 4004
 ```
 
 *Creator -  amon (@nn_amon)*
@@ -20,7 +18,7 @@ nc get.pwn.sg 4001
 0. Install docker on the hosting system
 1. Replace the flag in distribute/flag
 2. Build the docker image with: `sh dockerbuild.sh`
-3. Replace the port 1500 with your desired port in dockerrun.sh
+3. Replace the port with your desired port in dockerrun.sh
 4. Start the docker image: `sh dockerrun.sh`
 5. Test the connectivity with netcat.
 
