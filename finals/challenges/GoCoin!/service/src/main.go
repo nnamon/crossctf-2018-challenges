@@ -36,22 +36,22 @@ func page_not_found(rw http.ResponseWriter, r *http.Request){
 }
 
 func (this *mainController) Flag() {
-    purse := this.GetSession("purse")
+    wallet := this.GetSession("wallet")
     bank := this.GetSession("bank")
-    if purse == nil {
-        this.SetSession("purse", float64(1))
+    if wallet == nil {
+        this.SetSession("wallet", float64(1))
     }
     if bank == nil {
         this.SetSession("bank", float64(0))
     }
 
-    if purse.(float64) < 1.337 {
+    if wallet.(float64) < 1.337 {
         this.TplName = "error.html"
-        this.Data["message"] = "Insufficient GoCoin! in purse to buy flag."
+        this.Data["message"] = "Insufficient GoCoin! in wallet to buy flag."
         return
     }
 
-    this.SetSession("purse", Round(purse.(float64) - 1.337,0.01))
+    this.SetSession("wallet", Round(wallet.(float64) - 1.337,0.01))
     this.TplName = "flag.html"
 }
 
@@ -63,26 +63,26 @@ func (this *mainController) Withdraw() {
         return
     }
 
-    purse := this.GetSession("purse")
+    wallet := this.GetSession("wallet")
     bank := this.GetSession("bank")
-    if purse == nil {
-        this.SetSession("purse", float64(1))
+    if wallet == nil {
+        this.SetSession("wallet", float64(1))
     }
     if bank == nil {
         this.SetSession("bank", float64(0))
     }
-    purse = this.GetSession("purse")
+    wallet = this.GetSession("wallet")
     bank = this.GetSession("bank")
 
     if bank.(float64) >= amount {
-        this.SetSession("purse", Round(purse.(float64) + amount,0.01))
+        this.SetSession("wallet", Round(wallet.(float64) + amount,0.01))
         this.SetSession("bank", Round(bank.(float64) - amount,0.01))
     } else {
         this.TplName = "error.html"
         this.Data["message"] = "Insufficient GoCoin! in bank."
         return
     }
-    this.Data["purse"] = this.GetSession("purse").(float64)
+    this.Data["wallet"] = this.GetSession("wallet").(float64)
     this.Data["bank"] = this.GetSession("bank").(float64)
     this.Data["amount"] = amount
     this.TplName = "withdraw.html"
@@ -96,42 +96,42 @@ func (this *mainController) Deposit() {
         return
     }
 
-    purse := this.GetSession("purse")
+    wallet := this.GetSession("wallet")
     bank := this.GetSession("bank")
-    if purse == nil {
-        this.SetSession("purse", float64(1))
+    if wallet == nil {
+        this.SetSession("wallet", float64(1))
     }
     if bank == nil {
         this.SetSession("bank", float64(0))
     }
-    purse = this.GetSession("purse")
+    wallet = this.GetSession("wallet")
     bank = this.GetSession("bank")
 
-    if purse.(float64) >= amount {
-        this.SetSession("purse", Round(purse.(float64) - amount,0.01))
+    if wallet.(float64) >= amount {
+        this.SetSession("wallet", Round(wallet.(float64) - amount,0.01))
         this.SetSession("bank", Round(bank.(float64) + amount,0.01))
     } else {
         this.TplName = "error.html"
-        this.Data["message"] = "Insufficient GoCoin! in purse."
+        this.Data["message"] = "Insufficient GoCoin! in wallet."
         return
     }
-    this.Data["purse"] = this.GetSession("purse").(float64)
+    this.Data["wallet"] = this.GetSession("wallet").(float64)
     this.Data["bank"] = this.GetSession("bank").(float64)
     this.Data["amount"] = amount
     this.TplName = "deposit.html"
 }
 
 func (this *mainController) Get() {
-    purse := this.GetSession("purse")
+    wallet := this.GetSession("wallet")
     bank := this.GetSession("bank")
-    if purse == nil {
-        this.SetSession("purse", float64(1))
+    if wallet == nil {
+        this.SetSession("wallet", float64(1))
     }
     if bank == nil {
         this.SetSession("bank", float64(0))
     }
 
-    this.Data["purse"] = this.GetSession("purse").(float64)
+    this.Data["wallet"] = this.GetSession("wallet").(float64)
     this.Data["bank"] = this.GetSession("bank").(float64)
     this.TplName = "index.html"
 }
