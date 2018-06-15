@@ -4,3 +4,4 @@ peda-session*
 .gdb_history
 core
 *.pyc
+qemu*.core
