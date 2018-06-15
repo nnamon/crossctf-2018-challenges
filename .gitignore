@@ -5,3 +5,4 @@ peda-session*
 core
 *.pyc
 qemu*.core
+.DS_Store
