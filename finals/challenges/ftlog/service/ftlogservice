@@ -6,7 +6,7 @@ service ftlogservice
     wait        = no
     user        = ftlog
     bind        = 0.0.0.0
-    server      = /home/ftlog/ftlog
+    server      = /home/ftlog/run.sh
     type        = UNLISTED
     port        = 31337
 }

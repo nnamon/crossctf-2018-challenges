@@ -6,7 +6,7 @@ service slowmoservice
     wait        = no
     user        = slowmo
     bind        = 0.0.0.0
-    server      = /home/slowmo/slowmo
+    server      = /home/slowmo/run.sh
     type        = UNLISTED
     port        = 31337
 }

@@ -6,6 +6,7 @@ RUN useradd -m $user
 RUN echo "$user     hard    nproc       20" >> /etc/security/limits.conf
 COPY ./ftlog /home/$user/
 COPY ./flag /home/$user/
+COPY ./run.sh /home/$user/
 COPY ./ftlogservice /etc/xinetd.d/ftlogservice
 RUN chown -R root:$user /home/$user
 RUN chmod -R 750 /home/$user
