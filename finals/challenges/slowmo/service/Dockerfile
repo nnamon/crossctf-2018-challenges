@@ -6,6 +6,7 @@ RUN useradd -m $user
 RUN echo "$user     hard    nproc       20" >> /etc/security/limits.conf
 COPY ./slowmo /home/$user/
 COPY ./flag /home/$user/
+COPY ./run.sh /home/$user/
 COPY ./service /etc/xinetd.d/service
 RUN chown -R root:$user /home/$user
 RUN chmod -R 750 /home/$user
