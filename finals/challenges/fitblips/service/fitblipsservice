@@ -1,12 +1,12 @@
-service realbabypwnservice
+service fitblipsservice
 {
     disable = no
     socket_type = stream
     protocol    = tcp
     wait        = no
-    user        = realbabypwnuser
+    user        = fitblips
     bind        = 0.0.0.0
-    server      = /home/realbabypwnuser/realbabypwn
+    server      = /home/fitblips/fitblips.py
     type        = UNLISTED
     port        = 31337
 }

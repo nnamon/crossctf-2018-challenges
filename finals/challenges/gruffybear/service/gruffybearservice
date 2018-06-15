@@ -1,0 +1,13 @@
+service gruffybearservice
+{
+    disable = no
+    socket_type = stream
+    protocol    = tcp
+    wait        = no
+    user        = gruffybear
+    bind        = 0.0.0.0
+    server      = /home/gruffybear/gruffybear
+    type        = UNLISTED
+    port        = 31337
+}
+
