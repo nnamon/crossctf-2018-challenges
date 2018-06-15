@@ -1,1 +1,1 @@
-docker build -t xctf-web .
+docker build -t retroweb .
