@@ -1,0 +1,13 @@
+service theevilnessservice
+{
+    disable = no
+    socket_type = stream
+    protocol    = tcp
+    wait        = no
+    user        = theevilness
+    bind        = 0.0.0.0
+    server      = /home/theevilness/theevilness.py
+    type        = UNLISTED
+    port        = 31337
+}
+
