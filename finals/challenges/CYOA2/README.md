@@ -10,7 +10,7 @@ instrument...
 
 Non-standard flag format: `[0-9]+`
 
-nc ctf.pwn.sg 1500
+nc ctf.pwn.sg 11006
 ```
 
 *Creator -  prokarius (@prokarius)*

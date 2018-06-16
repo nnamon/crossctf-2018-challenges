@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker run -dt -p 4532:31337 gruffybar
+docker run -dt -p 4002:31337 gruffybear

@@ -10,7 +10,7 @@ flag page.
 ```
 Catch the Wave. Coke!
 
-nc get.pwn.sg 4001
+nc ctf.pwn.sg 4001
 ```
 
 *Creator -  amon (@nn_amon)*

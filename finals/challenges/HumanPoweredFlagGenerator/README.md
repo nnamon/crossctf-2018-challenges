@@ -20,5 +20,5 @@ Keep cranking until the whole flag appears!
 
 # Exploit Details
 
-Exploit to be added.
+Working solution code added in src/solution.py
 Code to find the last 3 digits of x! can be found in author's repo of competitive programming codes.
