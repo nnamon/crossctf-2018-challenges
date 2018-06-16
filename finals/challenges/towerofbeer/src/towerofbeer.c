@@ -306,7 +306,11 @@ void check(node* head, long* inputs, size_t* checked) {
 
 //crazy struct reversing
 void rochefort8(){
-    
+    if (ptrace(PTRACE_TRACEME, 0, 1, 0) == -1) {
+        puts("Something bad happened!");
+        exit(1);
+    }
+
     // make structs
     node nodes[6];
 
@@ -391,7 +395,7 @@ int main() {
     char buf[BUF_SIZE];
     fgets(buf, BUF_SIZE, stdin);
 
-    sscanf("%d", buf, &choice);
+    sscanf(buf, "%d", &choice);
 
 
     switch(choice) {
