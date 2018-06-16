@@ -1,1 +1,1 @@
-docker build -t xctf-gocoinplus .
+docker build -t xctf-gocoinplusplus .
