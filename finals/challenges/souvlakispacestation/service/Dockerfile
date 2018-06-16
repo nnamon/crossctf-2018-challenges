@@ -1,13 +1,13 @@
 FROM ubuntu:xenial
-ENV user=ftlog
+ENV user=souvlaki
 RUN apt-get update
-RUN apt-get install -y xinetd qemu
+RUN apt-get install -y xinetd qemu vim
 RUN useradd -m $user
 RUN echo "$user     hard    nproc       20" >> /etc/security/limits.conf
-COPY ./ftlog /home/$user/
+COPY ./souvlaki /home/$user/
 COPY ./flag /home/$user/
 COPY ./run.sh /home/$user/
-COPY ./ftlogservice /etc/xinetd.d/ftlogservice
+COPY ./service /etc/xinetd.d/service
 RUN chown -R root:$user /home/$user
 RUN chmod -R 750 /home/$user
 RUN chown root:$user /home/$user/flag

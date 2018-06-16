@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:xenial
 ENV user=fitblips
 RUN apt-get update
 RUN apt-get install -y xinetd python-pip
