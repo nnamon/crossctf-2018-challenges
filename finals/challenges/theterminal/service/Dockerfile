@@ -1,8 +1,8 @@
-FROM ubuntu:latest
+FROM ubuntu:xenial
 ENV user=theterminal
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
-RUN apt-get install -y xinetd apache2 python vim python-pip sqlite3 gunicorn
+RUN apt-get install -y xinetd apache2 python vim python-pip sqlite3 gunicorn netcat
 RUN pip install -U pip
 RUN pip install -U flask
 RUN pip install -U flask-cors
