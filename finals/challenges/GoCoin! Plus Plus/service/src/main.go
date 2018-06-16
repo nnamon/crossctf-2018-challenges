@@ -51,7 +51,7 @@ func (this *mainController) Source() {
 }
 
 func (this *mainController) Flag() {
-    walletString := this.Ctx.GetCookie("wallet")
+    walletString := this.Ctx.GetCookie("wallet_2")
     if walletString == "" {
         walletString, err := GenerateNewWallet()
         if err != nil {
@@ -59,7 +59,7 @@ func (this *mainController) Flag() {
             this.Data["message"] = "Something Went Wrong."
             return
         }
-        this.Ctx.SetCookie("wallet", walletString)
+        this.Ctx.SetCookie("wallet_2", walletString)
     }
     wallet, bank, err := ParseWallet(walletString, publicKey)
     if err != nil {
@@ -83,7 +83,7 @@ func (this *mainController) Flag() {
         this.Data["message"] = "Something Went Wrong."
         return
     }
-    this.Ctx.SetCookie("wallet", walletString)
+    this.Ctx.SetCookie("wallet_2", walletString)
     this.TplName = "flag.html"
 }
 
@@ -95,7 +95,7 @@ func (this *mainController) Withdraw() {
         return
     }
 
-        walletString := this.Ctx.GetCookie("wallet")
+        walletString := this.Ctx.GetCookie("wallet_2")
     if walletString == "" {
         walletString, err := GenerateNewWallet()
         if err != nil {
@@ -103,7 +103,7 @@ func (this *mainController) Withdraw() {
             this.Data["message"] = "Something Went Wrong."
             return
         }
-        this.Ctx.SetCookie("wallet", walletString)
+        this.Ctx.SetCookie("wallet_2", walletString)
     }
     wallet, bank, err := ParseWallet(walletString, publicKey)
     if err != nil {
@@ -130,7 +130,7 @@ func (this *mainController) Withdraw() {
         this.Data["message"] = "Something Went Wrong."
         return
     }
-    this.Ctx.SetCookie("wallet", walletString)
+    this.Ctx.SetCookie("wallet_2", walletString)
     this.Data["wallet"] = wallet
     this.Data["bank"] = bank
     this.Data["amount"] = amount
@@ -145,7 +145,7 @@ func (this *mainController) Deposit() {
         return
     }
 
-    walletString := this.Ctx.GetCookie("wallet")
+    walletString := this.Ctx.GetCookie("wallet_2")
     if walletString == "" {
         walletString, err := GenerateNewWallet()
         if err != nil {
@@ -153,7 +153,7 @@ func (this *mainController) Deposit() {
             this.Data["message"] = "Something Went Wrong."
             return
         }
-        this.Ctx.SetCookie("wallet", walletString)
+        this.Ctx.SetCookie("wallet_2", walletString)
     }
     wallet, bank, err := ParseWallet(walletString, publicKey)
     if err != nil {
@@ -178,7 +178,7 @@ func (this *mainController) Deposit() {
         this.Data["message"] = "Something Went Wrong."
         return
     }
-    this.Ctx.SetCookie("wallet", walletString)
+    this.Ctx.SetCookie("wallet_2", walletString)
     this.Data["wallet"] = wallet
     this.Data["bank"] = bank
     this.Data["amount"] = amount
@@ -227,7 +227,7 @@ func GenerateNewWallet() (string, error) {
 }
 
 func (this *mainController) Get() {
-    walletString := this.Ctx.GetCookie("wallet")
+    walletString := this.Ctx.GetCookie("wallet_2")
     if walletString == "" {
         walletString, err := GenerateNewWallet()
         if err != nil {
@@ -235,7 +235,7 @@ func (this *mainController) Get() {
             this.Data["message"] = "Something Went Wrong."
             return
         }
-        this.Ctx.SetCookie("wallet", walletString)
+        this.Ctx.SetCookie("wallet_2", walletString)
     }
     wallet, bank, err := ParseWallet(walletString, publicKey)
     if err != nil {
