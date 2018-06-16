@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t gruffybear .
+docker build -t towerofbeer .

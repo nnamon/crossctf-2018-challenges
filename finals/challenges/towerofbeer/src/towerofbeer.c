@@ -63,7 +63,6 @@ void rochefort6(){
         printf("%d\n", r);
         
         puts("Your turn: ");
-        //probably will change to allow buffer overflow
         if(fgets(buf, BUF_SIZE, stdin) != NULL) {
             uint32_t ans = h(buf, strlen(buf));
             printf("Your output is %d\n", ans);
@@ -386,8 +385,31 @@ int main() {
     setvbuf(stdout, NULL, _IONBF, 0);
     setvbuf(stderr, NULL, _IONBF, 0);
 
-    rochefort6();
-    rochefort8();
+    puts("Welcome to the Tower of Beer!");
+    puts("6: Rochefort 6");
+    puts("8: Rochefort 8");
+    puts("Tell me which beer you would like:");
+    puts("Or send any number to have both ;)");
 
+    int choice = 0;
+
+    char buf[BUF_SIZE];
+    fgets(buf, BUF_SIZE, stdin);
+
+    sscanf("%d", buf, &choice);
+
+
+    switch(choice) {
+        case 6:
+            rochefort6();
+            break;
+        case 8:
+            rochefort8();
+            break;
+        default:
+            rochefort6();
+            rochefort8();
+            break;
+    }
     return 0;
 }

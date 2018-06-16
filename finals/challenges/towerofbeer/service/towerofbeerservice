@@ -4,10 +4,10 @@ service realbabypwnservice
     socket_type = stream
     protocol    = tcp
     wait        = no
-    user        = realbabypwnuser
+    user        = towerofbeeruser
     bind        = 0.0.0.0
-    server      = /home/realbabypwnuser/realbabypwn
+    server      = /home/towerofbeeruser/towerofbeer
     type        = UNLISTED
-    port        = 31337
+    port        = 16666
 }
 

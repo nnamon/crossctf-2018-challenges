@@ -1,26 +1,30 @@
-Real Baby Pwnable
+Tower Of Beer
 ---------
+Two different beers, two different challenges.
 
-The binary is vulnerable to a memory information leak as well as a stack
-overflow vulnerability. It is compiled with stack canary and PIE.
+Rochefort 6 entails reversing an -O3 binary and breaking the LCG.
 
-The service fills out a buffer with fibonacci numbers and prompts the user
-repeatedly for which fibonnaci(n) number to query. There is no bounds checking
-on the n to query and memory addresses after the buffer can be retrieved. An
-attacker can leverage this to leak the canary as well as the return address
-back to main. This allows the attacker to bypass the stack canary during the
-overflow and to calculate the address of `babymode` function from the main
-leak.
+Rochefort 8 entails reversing a binary search tree (where each node is a different type) and keying in relevant data values to substitute in.
 
 # Question Text
 
-```
-This is an actual baby pwn challenge.
+# Rochefort 6
 
-nc ctf.pwn.sg 1500
+```
+Nothing like a Rochefort 6 in the hot summer weather...
+
+nc ctf.pwn.sg 16666
 ```
 
-*Creator -  amon (@nn_amon)*
+# Rochefort 8
+
+```
+Why have a Rochefort 6 when you can have a Rochefort 8?
+
+nc ctf.pwn.sg 16666
+```
+
+*Creator -  waituck (@wongwaituck)*
 
 # Setup Guide
 
