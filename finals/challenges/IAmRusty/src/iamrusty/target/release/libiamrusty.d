@@ -1,0 +1,1 @@
+/home/vagrant/CTF/2018/crossctf/crossctf-2018-challenges/finals/challenges/IAmRusty/src/iamrusty/target/release/libiamrusty.rlib: /home/vagrant/CTF/2018/crossctf/crossctf-2018-challenges/finals/challenges/IAmRusty/src/iamrusty/src/lib.rs

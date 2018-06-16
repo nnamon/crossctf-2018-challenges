@@ -1,0 +1,9 @@
+[package]
+
+name = "iamrusty"
+version = "0.0.1"
+authors = ["Quan Yang Yeo <@quanyang>"]
+
+[profile.release]
+lto = true
+panic = 'abort'
