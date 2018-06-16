@@ -13,7 +13,7 @@ Rochefort 8 entails reversing a binary search tree (where each node is a differe
 ```
 Nothing like a Rochefort 6 in the hot summer weather...
 
-nc ctf.pwn.sg 16666
+nc ctf.pwn.sg 16667
 ```
 
 # Rochefort 8
@@ -21,7 +21,7 @@ nc ctf.pwn.sg 16666
 ```
 Why have a Rochefort 6 when you can have a Rochefort 8?
 
-nc ctf.pwn.sg 16666
+nc ctf.pwn.sg 16667
 ```
 
 *Creator -  waituck (@wongwaituck)*

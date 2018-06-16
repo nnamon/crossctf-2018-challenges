@@ -1,4 +1,4 @@
-service realbabypwnservice
+service towerofbeerservice
 {
     disable = no
     socket_type = stream

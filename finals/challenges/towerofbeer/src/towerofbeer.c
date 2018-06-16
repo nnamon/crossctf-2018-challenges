@@ -85,7 +85,7 @@ void rochefort6(){
 #pragma GCC pop_options
 
 void flag1(){
-	FILE *f = fopen("flag1", "r");
+	FILE *f = fopen("/home/towerofbeeruser/flag1", "r");
 	char flag[48];
 
 	if (f == NULL){
@@ -103,7 +103,7 @@ void flag1(){
 }
 
 void flag2(){
-    FILE *f = fopen("flag2", "r");
+    FILE *f = fopen("/home/towerofbeeruser/flag2", "r");
     char flag[48];
 
     if (f == NULL){
@@ -306,11 +306,6 @@ void check(node* head, long* inputs, size_t* checked) {
 
 //crazy struct reversing
 void rochefort8(){
-    
-	if (ptrace(PTRACE_TRACEME, 0, 1, 0) == -1) {
-        puts("Something bad happened!");
-        exit(1);
-    }
     
     // make structs
     node nodes[6];
