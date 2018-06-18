@@ -2,11 +2,11 @@
 
 cd quals
 ./build.sh
-./quals/run.sh
+./run.sh
 cd ..
 
 cd finals
-./finals/build.sh
-./finals/runconcurrent.sh
+./build.sh
+./runconcurrent.sh
 cd ..
 
