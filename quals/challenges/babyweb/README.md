@@ -11,7 +11,7 @@ It is all in the challenge.
 http://ctf.pwn.sg:8180
 ```
 
-*Creator -  amon (@nn_amon)*
+*Creator -  quanyang (@quanyang)*
 
 # Setup Guide
 
